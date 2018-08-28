@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3 GRID LAYOUT</title>
+</head>
+<body>
+
+  <style media="screen">
+    *{padding: 0; margin: 0;}
+    #main{
+      display:grid;
+      grid-template-rows: 15vh 10vh 55vh 20vh;
+      grid-template-areas: "header header" "nav nav" "content aside" "footer footer"}
+      .mainHeader{grid-area:header; background: red;}
+      .mainNav{grid-area:nav; background: green;}
+      .mainContent{grid-area:content; background: blue;}
+      .mainAside{grid-area:aside; background: yellow;}
+      .mainFooter{grid-area:footer; background: orange;}
+      /* Breakpoints */
+      @media screen and (max-width: 768px){
+        body {background: #cdcdcd;}
+        #main { grid-template-areas: "header" "content" "aside" "footer";}
+        .mainNav { grid-area: header;}
+      }
+  </style>
+
+  <section id="main">
+    <header class="mainHeader">
+      header
+    </header>
+    <nav class="mainNav">
+      Nav
+    </nav>
+    <article class="mainContent">
+      Content
+    </article>
+    <aside class="mainAside">
+      Aside
+    </aside>
+    <footer class="mainFooter">Footer</footer>
+  </section>
+
+</body>
+</html>
