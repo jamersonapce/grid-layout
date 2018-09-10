@@ -74,7 +74,7 @@ strong{
   grid-area: menu-list;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-start: 10;
+  grid-column-start: 9;
   grid-column-end: 14;
   align-items: start;
   justify-items: center;
@@ -426,10 +426,20 @@ strong{
 
 /*VERSÃO MOBILE*/
 
-@media screen and (max-width: 768px) {
-  /* .menu{
-    grid-template-columns: 5% repeat(12, 1fr) 5%;
-  } */
+@media (max-width: 768px) {
+  .menu {
+    grid-template-columns: 3% repeat(12,1fr) 3%;
+    column-gap: 0.5rem;
+  }
+
+  .menu-logo{
+    grid-column-end: 3;
+    font-size: 1rem;
+  }
+
+  .menu-list{
+    grid-column-start: 6;
+  }
 
   .header-section{
     grid-template-columns: 3% repeat(1,1fr) 3%;
@@ -495,5 +505,4 @@ strong{
     ".    conteudo2        ."
     ".        .            .";
   }
-
 }
